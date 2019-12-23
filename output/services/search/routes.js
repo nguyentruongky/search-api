@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var SearchController_1 = require("./SearchController");
+var checks_1 = require("../../middleware/checks");
 exports.default = [
     {
         path: "/",
@@ -52,6 +53,7 @@ exports.default = [
         path: "/api/v1/search",
         method: "get",
         handler: [
+            checks_1.checkSearchParams,
             function (_a, res) {
                 var query = _a.query;
                 return __awaiter(void 0, void 0, void 0, function () {

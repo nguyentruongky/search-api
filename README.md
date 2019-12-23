@@ -72,12 +72,12 @@ With TypeScript, we can create error classes, which can't be done with Javascrip
 ### Framework 
 This article is written with Express. What if someday we need to change to Koa or Sail, we have to change Express from hundreds of files. 
 
-I added `./src/Framework` as a bridge of Express. So we removed the dependency on Express in the code. 
+I added `./src/Framework` as a bridge to Express. So we removed the dependency on Express in the code. 
 
 Remember to update `tsconfig.json` with 
 ```
 "compilerOptions": {
-    "baseUrl": "./src",
-    ...
-  }
+  "baseUrl": "./src",
+  ...
+}
 ```
