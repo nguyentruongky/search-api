@@ -1,5 +1,4 @@
-import { Request, Response, request } from "express"
-import { RequestError } from "request-promise/errors"
+import { Request, Response } from "Framework"
 import { getPlacesByName } from "./SearchController"
 
 export default [

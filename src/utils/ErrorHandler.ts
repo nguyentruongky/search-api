@@ -1,4 +1,4 @@
-import { Response, NextFunction } from "express"
+import { Response, NextFunction } from "Framework"
 import { HTTPClientError, HTTP404Error} from "../utils/httpErrors"
 
 export const notFoundError = () => {

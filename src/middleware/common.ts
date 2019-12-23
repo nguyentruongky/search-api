@@ -1,4 +1,4 @@
-import { Router } from "express"
+import { Router } from "Framework"
 import cors from "cors"
 import parser from "body-parser"
 import compression from "compression"

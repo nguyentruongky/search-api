@@ -4,12 +4,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = __importDefault(require("http"));
-var express_1 = __importDefault(require("express"));
+// import express from "express"
+var Framework_1 = __importDefault(require("./Framework"));
 var utils_1 = require("./utils");
 var middleware_1 = __importDefault(require("./middleware"));
 var services_1 = __importDefault(require("./services"));
 var errorHandlers_1 = __importDefault(require("./middleware/errorHandlers"));
-var router = express_1.default();
+var router = Framework_1.default();
 utils_1.applyMiddleware(middleware_1.default, router);
 utils_1.applyRoutes(services_1.default, router);
 utils_1.applyMiddleware(errorHandlers_1.default, router);
