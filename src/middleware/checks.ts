@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction} from "Framework"
-import { HTTP400Error } from "../utils/httpErrors"
+import { HTTP400Error } from "utils/httpErrors"
 
 export const checkSearchParams = (
     req: Request, 
