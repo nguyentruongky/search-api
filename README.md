@@ -68,3 +68,16 @@ We group all routes into `./services` and group by features, like membership, se
 Handle errors is one of the most important things. We have an error handlers middleware, and Facade to hide the logics of handlers. 
 
 With TypeScript, we can create error classes, which can't be done with Javascript. Any error comes, we can throw a related error effortlessly. 
+
+### Framework 
+This article is written with Express. What if someday we need to change to Koa or Sail, we have to change Express from hundreds of files. 
+
+I added `./src/Framework` as a bridge of Express. So we removed the dependency on Express in the code. 
+
+Remember to update `tsconfig.json` with 
+```
+"compilerOptions": {
+    "baseUrl": "./src",
+    ...
+  }
+```
