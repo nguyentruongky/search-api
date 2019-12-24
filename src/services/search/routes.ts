@@ -1,6 +1,7 @@
 import { Request, Response } from "Framework"
+import 'module-alias/register'
 import { getPlacesByName } from "./SearchController"
-import { checkSearchParams } from "../../middleware/checks"
+import { checkSearchParams } from "@/middleware/checks"
 
 export default [
     {
