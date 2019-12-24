@@ -36,6 +36,14 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "roots": [
+      "src"
+    ],
+    "moduleNameMapper": {
+      "@/(.*)": "<rootDir>/src/$1"
+    },
+  
+    "moduleDirectories": ["node_modules", "src", "output"],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
