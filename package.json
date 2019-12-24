@@ -23,6 +23,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^5.0.0-alpha.7",
+    "module-alias": "^2.2.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
     "supertest": "^4.0.2",
@@ -49,5 +50,8 @@
     "@types/jest": "^24.0.24",
     "jest": "^24.9.0",
     "ts-jest": "^24.2.0"
+  },
+  "_moduleAliases": {
+    "@config": "output/config"
   }
 }
