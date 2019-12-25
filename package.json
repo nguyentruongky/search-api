@@ -24,6 +24,7 @@
     "dotenv": "^8.2.0",
     "express": "^5.0.0-alpha.7",
     "module-alias": "^2.2.2",
+    "pm2": "^4.2.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
     "supertest": "^4.0.2",
@@ -42,8 +43,11 @@
     "moduleNameMapper": {
       "@/(.*)": "<rootDir>/src/$1"
     },
-  
-    "moduleDirectories": ["node_modules", "src", "output"],
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "output"
+    ],
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

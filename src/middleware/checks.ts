@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction} from "Framework"
 import 'module-alias/register'
-import { HTTP400Error } from "@/utils/httpErrors"
 
 export const checkSearchParams = (
     req: Request, 
@@ -8,7 +7,7 @@ export const checkSearchParams = (
     next: NextFunction
 ) => {
     if (!req.query.q) {
-        throw new HTTP400Error("Missing q parameter")
+        res.status(400).send("Missing q parameter")
     } else {
         next()
     }

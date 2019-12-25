@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction, Router } from "Framework"
 import 'module-alias/register'
-import * as ErrorHandler from "@/utils/ErrorHandler"
+import * as ErrorHandler from "../utils/ErrorHandler"
 
 const handle404Error = (router: Router) => {
     router.use((req: Request, res: Response) => {
-        ErrorHandler.notFoundError()
+        ErrorHandler.notFoundError(res)
     })
 }
 

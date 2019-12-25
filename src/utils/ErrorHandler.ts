@@ -1,8 +1,8 @@
 import { Response, NextFunction } from "Framework"
 import { HTTPClientError, HTTP404Error} from "./httpErrors"
 
-export const notFoundError = () => {
-    throw new HTTP404Error("Method not found.")
+export const notFoundError = (res: Response) => {
+    res.status(404).send("Method not found.")
 }
 
 export const clientError = (err: Error, res: Response, next: NextFunction) => { 
