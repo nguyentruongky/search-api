@@ -81,3 +81,43 @@ Remember to update `tsconfig.json` with
   ...
 }
 ```
+
+### Import 
+I don't want to write `import yourSource from "../../../yourSource"`. The path is tight coupling to the current file. Do some tricks to access it from the root path, that's better way and more beautiful. 
+
+- Run `npm i --save module-alias`
+- Add to `tsconfig.json`
+```
+"baseUrl": "./src",
+"paths": {
+  "@/*": ["*"],
+},
+```
+`paths` is related urls to `baseUrl`. You can add some other aliases like `middleware`, `routes`. 
+- Add to `package.json`
+```
+"_moduleAliases": {
+  "@": "output"
+}
+```
+`output` is your compiler destination. Must be same to `outDir` in `tsconfig.json`. Your app runs from here. 
+- Every time you use import your module, add this `import 'module-alias/register'`. A bit inconvenience but still better than write `../../../something`. 
+
+### Unit test
+If you follow the tut, you can't pass integration test. Reason, it doesn't know the output directory. You have to add these into `package.json`. 
+```
+"jest": {
+  "roots": [
+    "src"
+  ],
+  "moduleNameMapper": {
+    "@/(.*)": "<rootDir>/src/$1"
+  },
+  "moduleDirectories": [
+    "node_modules",
+    "src",
+    "output"
+  ],
+  ...
+}
+```
