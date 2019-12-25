@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npx tsc",
     "dev": "tsc-watch --onSuccess \"node ./output/server.js\"",
-    "test": "jest --coverage --verbose"
+    "test": "jest --coverage --verbose",
+    "start": "npx pm2 start pm2.yaml"
   },
   "keywords": [],
   "author": "",
